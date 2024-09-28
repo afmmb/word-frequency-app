@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <title>Kelime Frekansı Uygulaması</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Kelime Frekansı Uygulaması</h1>
+        <form id="word-form">
+            <textarea id="text-input" rows="10" cols="50" placeholder="Metninizi buraya girin"></textarea><br>
+            <label for="limit">Listelenecek kelime sayısı:</label>
+            <input type="number" id="limit" min="1" value="10"><br>
+            <input type="checkbox" id="list-all">
+            <label for="list-all">Tümünü Listele</label><br>
+            <input type="checkbox" id="use-stemming">
+            <label for="use-stemming">Kelimelerin Köklerini Bul</label><br>
+            <select id="filter-type">
+                <option value="word">Kelime</option>
+                <option value="letter">Harf</option>
+                <option value="number">Rakam</option>
+                <option value="all">Hepsi</option>
+            </select><br>
+            <button type="submit">Analiz Et</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
